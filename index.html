@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MaxFit | Elite Personal Training</title>
+    <title>MaxFit | Entrenamiento Personal Elite</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
@@ -238,7 +238,136 @@
             margin: 0 auto;
         }
 
-        /* Services */
+        h1 {
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+
+        h2 {
+            margin-top: 30px;
+        }
+
+        /* Features Section */
+        .features-section {
+            background: linear-gradient(135deg, rgba(255,107,53,0.08), rgba(247,147,30,0.08));
+            padding: 60px 0;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-item {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            border-left: 4px solid var(--primary);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+        }
+
+        .feature-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+        }
+
+        .feature-item i {
+            color: var(--primary);
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .feature-item h3 {
+            color: var(--primary);
+            margin-bottom: 0.8rem;
+        }
+
+        .results-section {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 60px 0;
+        }
+
+        .results-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .results-left h2 {
+            color: white;
+            margin-top: 0;
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .results-left p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+            opacity: 0.95;
+        }
+
+        .results-stats {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .result-stat {
+            background: rgba(255,255,255,0.15);
+            padding: 1.5rem;
+            border-radius: 10px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+        }
+
+        .result-stat h4 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .ideal-section {
+            background: linear-gradient(135deg, rgba(0,200,83,0.08), rgba(0,150,60,0.08));
+            padding: 60px 0;
+        }
+
+        .ideal-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .ideal-item {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 15px;
+            border-top: 4px solid #00c853;
+            box-shadow: 0 5px 15px rgba(0,200,83,0.1);
+            transition: all 0.3s ease;
+        }
+
+        .ideal-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(0,200,83,0.15);
+        }
+
+        .ideal-item i {
+            color: #00c853;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .ideal-item h3 {
+            color: var(--dark);
+            margin-bottom: 0.8rem;
+        }
+
+        /* Sections */
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -368,6 +497,21 @@
             justify-content: center;
             color: white;
             font-weight: 600;
+            overflow: hidden;
+        }
+
+        .client-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .service-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 15px;
+            margin-bottom: 1.5rem;
         }
 
         /* Stats Section */
@@ -586,6 +730,22 @@
                 grid-template-columns: repeat(2, 1fr);
             }
 
+            .results-content {
+                grid-template-columns: 1fr;
+            }
+
+            .results-left h2 {
+                font-size: 1.8rem;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .ideal-grid {
+                grid-template-columns: 1fr;
+            }
+
             section {
                 padding: 60px 0;
             }
@@ -616,13 +776,13 @@
         <nav>
             <div class="logo">MaxFit</div>
             <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#stats">Stats</a></li>
-                <li><a href="#testimonials">Reviews</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#home">Inicio</a></li>
+                <li><a href="#services">Servicios</a></li>
+                <li><a href="#stats">Estadísticas</a></li>
+                <li><a href="#testimonials">Reseñas</a></li>
+                <li><a href="#contact">Contacto</a></li>
             </ul>
-            <a href="#contact" class="cta-btn">Get Started</a>
+            <a href="#contact" class="cta-btn">Comenzar</a>
             <button class="menu-toggle" id="menuToggle">
                 <i class="fas fa-bars"></i>
             </button>
@@ -632,12 +792,117 @@
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-content">
-            <h1>Transform Your Body.<br>Transform Your Life.</h1>
-            <p>Join 500+ clients who have achieved their dream physique with personalized training programs designed just for you.</p>
+            <h1>Transforma tu cuerpo en 90 días sin dietas extremas</h1>
+            <p>Entrenamiento personalizado + seguimiento real por WhatsApp</p>
             <div class="hero-buttons">
-                <a href="#contact" class="cta-btn">Start Training</a>
-                <a href="#services" class="btn-secondary">View Programs</a>
-                <a href="https://wa.me/573154338800" class="btn">empiezahoy</a>
+                <a href="#contact" class="cta-btn">Comenzar Entrenamiento</a>
+                <a href="#services" class="btn-secondary">Ver Programas</a>
+                <a href="https://wa.me/573154338800" class="btn">¡Empieza Hoy!</a>
+                <a href="https://wa.me/573154338800" class="btn">Quiero mi plan personalizado</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="features-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>¿Qué incluye tu plan?</h2>
+                <p>Todo lo que necesitas para transformar tu cuerpo y mantener los resultados</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <i class="fas fa-dumbbell"></i>
+                    <h3>Plan Personalizado</h3>
+                    <p>Programa de entrenamiento diseñado específicamente para tu cuerpo, objetivos y nivel de experiencia. Adaptado cada semana.</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-utensils"></i>
+                    <h3>Guía de Nutrición</h3>
+                    <p>Plan de alimentación simple y delicioso. Sin contar calorías, sin alimentos prohibidos. Solo cambios reales que funcionan.</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Seguimiento Semanal</h3>
+                    <p>Reportes hechos a mano analizando tu progreso. Ajustes automáticos para optimizar resultados semana a semana.</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-comments"></i>
+                    <h3>Soporte WhatsApp</h3>
+                    <p>Respuestas rápidas a tus preguntas. Motivación diaria. Apoyo en tiempo real cuando lo necesites. Disponible 24/7.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="results-section">
+        <div class="container">
+            <div class="results-content">
+                <div class="results-left">
+                    <h2>Resultados Reales que Hablan</h2>
+                    <p>Más de 50 clientes han transformado completamente su cuerpo y su vida con nuestro sistema en los últimos 12 meses.</p>
+                    <p>La mayoría de nuestros clientes ven resultados <strong>visibles en las primeras 4 semanas</strong> y cambios dramáticos en 8 semanas.</p>
+                    <p>No son promesas, son <strong>casos documentados</strong> con fotos antes y después verificadas. Clientes de verdad, en vidas reales, con trabajos exigentes y compromisos.</p>
+                    <p style="margin-top: 2rem; font-weight: 600;">¿Quieres ser el próximo caso de éxito? <a href="https://wa.me/573154338800" style="color: white; text-decoration: underline;">Inicia tu transformación hoy</a></p>
+                </div>
+                <div class="results-stats">
+                    <div class="result-stat">
+                        <h4>50+</h4>
+                        <p>Clientes Transformados</p>
+                    </div>
+                    <div class="result-stat">
+                        <h4>95%</h4>
+                        <p>Mantienen Resultados</p>
+                    </div>
+                    <div class="result-stat">
+                        <h4>4 Sem</h4>
+                        <p>Primeros Resultados</p>
+                    </div>
+                    <div class="result-stat">
+                        <h4>24/7</h4>
+                        <p>Soporte Garantizado</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="ideal-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>¿Este Programa es Para Ti?</h2>
+                <p>Si alguno de estos puntos te describe, estás en el lugar correcto</p>
+            </div>
+            <div class="ideal-grid">
+                <div class="ideal-item">
+                    <i class="fas fa-weight"></i>
+                    <h3>Quieres Bajar de Peso</h3>
+                    <p>De forma rápida, sostenible y sin volver a recuperarlo. Sin pasar hambre ni hacer dietas extremas. Solo cambios reales.</p>
+                </div>
+                <div class="ideal-item">
+                    <i class="fas fa-question-circle"></i>
+                    <h3>No Sabes por Dónde Empezar</h3>
+                    <p>Te abruma la información conflictiva. No sabes qué entrenar, cómo comer, o si tu rutina es correcta. Aquí te lo resolvemos.</p>
+                </div>
+                <div class="ideal-item">
+                    <i class="fas fa-clock"></i>
+                    <h3>Tienes Poco Tiempo</h3>
+                    <p>Entre el trabajo, familia y responsabilidades. Entrenamientos eficientes de 30-45 minutos. Resultados en menos tiempo.</p>
+                </div>
+                <div class="ideal-item">
+                    <i class="fas fa-frustrated"></i>
+                    <h3>Has Probado de Todo</h3>
+                    <p>Dietas, gimnasios, entrenadores, suplementos. Nada ha funcionado duraderamente. Es hora de hacerlo bien de verdad.</p>
+                </div>
+                <div class="ideal-item">
+                    <i class="fas fa-bolt"></i>
+                    <h3>Quieres Energía y Confianza</h3>
+                    <p>No es solo sobre verse bien. Es sobre sentirte fuerte, con energía, y cómodo en tu cuerpo. Ese es el verdadero objetivo.</p>
+                </div>
+                <div class="ideal-item">
+                    <i class="fas fa-hands-helping"></i>
+                    <h3>Necesitas Responsabilidad</h3>
+                    <p>Un experto que te guíe, corrija y motive. Alguien que se asegure de que hagas lo que tienes que hacer. Nosotros somos ese apoyo.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -646,30 +911,33 @@
     <section id="services">
         <div class="container">
             <div class="section-header">
-                <h2>Training Programs</h2>
-                <p>Choose the perfect program for your goals and lifestyle</p>
+                <h2>Programas de Entrenamiento</h2>
+                <p>Elige el programa perfecto para tus objetivos y estilo de vida</p>
             </div>
             <div class="services-grid">
                 <div class="service-card">
+                    <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60" alt="Entrenamiento de Fuerza">
                     <div class="service-icon">
                         <i class="fas fa-dumbbell"></i>
                     </div>
-                    <h3>Strength Training</h3>
-                    <p>Build muscle, increase strength, and boost metabolism with progressive overload programs tailored to your level.</p>
+                    <h3>Entrenamiento de Fuerza</h3>
+                    <p>Construye músculo, aumenta la fuerza y acelera el metabolismo con programas de sobrecarga progresiva adaptados a tu nivel.</p>
                 </div>
                 <div class="service-card">
+                    <img src="https://images.unsplash.com/photo-1518611505868-48abc8a3ecd9?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60" alt="Pérdida de Grasa">
                     <div class="service-icon">
                         <i class="fas fa-weight-hanging"></i>
                     </div>
-                    <h3>Fat Loss</h3>
-                    <p>Combine smart nutrition and high-intensity training to burn fat while preserving muscle mass.</p>
+                    <h3>Pérdida de Grasa</h3>
+                    <p>Combina nutrición inteligente y entrenamiento de alta intensidad para quemar grasa preservando la masa muscular.</p>
                 </div>
                 <div class="service-card">
+                    <img src="https://images.unsplash.com/photo-1461896836934-ffe607ba8211?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60" alt="Rendimiento">
                     <div class="service-icon">
                         <i class="fas fa-running"></i>
                     </div>
-                    <h3>Performance</h3>
-                    <p>Athlete-focused training to improve speed, power, and endurance for competitive sports.</p>
+                    <h3>Rendimiento</h3>
+                    <p>Entrenamiento enfocado en atletas para mejorar velocidad, potencia y resistencia para deportes competitivos.</p>
                 </div>
             </div>
         </div>
@@ -681,19 +949,19 @@
             <div class="stats-grid">
                 <div class="stat-item">
                     <h3>500+</h3>
-                    <p>Happy Clients</p>
+                    <p>Clientes Felices</p>
                 </div>
                 <div class="stat-item">
                     <h3>15+</h3>
-                    <p>Years Experience</p>
+                    <p>Años de Experiencia</p>
                 </div>
                 <div class="stat-item">
                     <h3>98%</h3>
-                    <p>Success Rate</p>
+                    <p>Tasa de Éxito</p>
                 </div>
                 <div class="stat-item">
                     <h3>24/7</h3>
-                    <p>Support Available</p>
+                    <p>Soporte Disponible</p>
                 </div>
             </div>
         </div>
@@ -703,8 +971,8 @@
     <section id="testimonials" class="testimonials">
         <div class="container">
             <div class="section-header">
-                <h2>Success Stories</h2>
-                <p>Real results from real clients</p>
+                <h2>Historias de Éxito</h2>
+                <p>Resultados reales de clientes reales</p>
             </div>
             <div class="testimonials-grid">
                 <div class="testimonial-card">
@@ -715,12 +983,14 @@
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                     </div>
-                    <p>"Lost 25lbs in 12 weeks and gained confidence I never thought possible. Max is the real deal!"</p>
+                    <p>"Perdí 25 libras en 12 semanas y gané confianza que nunca pensé posible. ¡Max es de verdad!"</p>
                     <div class="client-info">
-                        <div class="client-avatar">JS</div>
+                        <div class="client-avatar">
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" alt="Jessica S.">
+                        </div>
                         <div>
                             <strong>Jessica S.</strong><br>
-                            <small>Marketing Manager</small>
+                            <small>Gerente de Marketing</small>
                         </div>
                     </div>
                 </div>
@@ -732,12 +1002,14 @@
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                     </div>
-                    <p>"Doubled my deadlift and ran my first marathon. Professional programming with personal attention."</p>
+                    <p>"Dupliqué mi peso muerto y corrí mi primer maratón. Programación profesional con atención personal."</p>
                     <div class="client-info">
-                        <div class="client-avatar">MK</div>
+                        <div class="client-avatar">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" alt="Mike K.">
+                        </div>
                         <div>
                             <strong>Mike K.</strong><br>
-                            <small>Software Engineer</small>
+                            <small>Ingeniero de Software</small>
                         </div>
                     </div>
                 </div>
@@ -749,12 +1021,14 @@
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                     </div>
-                    <p>"Finally found a trainer who understands busy professionals. Results without sacrificing my schedule."</p>
+                    <p>"Finalmente encontré un entrenador que entiende a los profesionales ocupados. Resultados sin sacrificar mi horario."</p>
                     <div class="client-info">
-                        <div class="client-avatar">AR</div>
+                        <div class="client-avatar">
+                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" alt="Alex R.">
+                        </div>
                         <div>
                             <strong>Alex R.</strong><br>
-                            <small>Entrepreneur</small>
+                            <small>Emprendedor</small>
                         </div>
                     </div>
                 </div>
@@ -766,53 +1040,53 @@
     <section id="contact" class="contact">
         <div class="container">
             <div class="section-header">
-                <h2>Ready to Start?</h2>
-                <p>Get in touch for a free consultation</p>
+                <h2>¿Listo para Comenzar?</h2>
+                <p>Ponte en contacto para una consulta gratuita</p>
             </div>
             <div class="contact-content">
                 <div class="contact-info">
-                    <h3>Let's Talk Results</h3>
+                    <h3>Hablemos de Resultados</h3>
                     <div class="contact-item">
                         <i class="fas fa-phone"></i>
                         <div>
                             <strong>(555) 123-4567</strong><br>
-                            <small>Mon-Fri 6AM-8PM</small>
+                            <small>Lun-Vie 6AM-8PM</small>
                         </div>
                     </div>
                     <div class="contact-item">
                         <i class="fas fa-envelope"></i>
                         <div>
-                            <strong>hello@maxfit.com</strong><br>
-                            <small>Response within 24h</small>
+                            <strong>hola@maxfit.com</strong><br>
+                            <small>Respuesta dentro de 24h</small>
                         </div>
                     </div>
                     <div class="contact-item">
                         <i class="fas fa-map-marker-alt"></i>
                         <div>
-                            <strong>123 Fitness Ave</strong><br>
-                            <small>City Center Gym, Downtown</small>
+                            <strong>Avenida Fitness 123</strong><br>
+                            <small>Gimnasio Centro, Centro Urbano</small>
                         </div>
                     </div>
                 </div>
                 <form class="contact-form" id="contactForm">
                     <div class="form-message" id="formMessage"></div>
                     <div class="form-group">
-                        <label for="name">Your Name</label>
-                        <input type="text" id="name" placeholder="Your Name" required>
+                        <label for="name">Tu Nombre</label>
+                        <input type="text" id="name" placeholder="Tu Nombre" required>
                     </div>
                     <div class="form-group">
-                        <label for="email">Your Email</label>
-                        <input type="email" id="email" placeholder="Your Email" required>
+                        <label for="email">Tu Email</label>
+                        <input type="email" id="email" placeholder="Tu Email" required>
                     </div>
                     <div class="form-group">
-                        <label for="phone">Phone Number</label>
-                        <input type="tel" id="phone" placeholder="Phone Number">
+                        <label for="phone">Número de Teléfono</label>
+                        <input type="tel" id="phone" placeholder="Número de Teléfono">
                     </div>
                     <div class="form-group">
-                        <label for="message">Tell me about your goals</label>
-                        <textarea id="message" placeholder="Tell me about your goals..." required></textarea>
+                        <label for="message">Cuéntame sobre tus objetivos</label>
+                        <textarea id="message" placeholder="Cuéntame sobre tus objetivos..." required></textarea>
                     </div>
-                    <button type="submit" class="cta-btn">Send Message</button>
+                    <button type="submit" class="cta-btn">Enviar Mensaje</button>
                 </form>
             </div>
         </div>
@@ -821,7 +1095,7 @@
     <!-- Footer -->
     <footer>
         <div class="container">
-            <p>&copy; 2024 MaxFit. All rights reserved. | Built for champions.</p>
+            <p>&copy; 2024 MaxFit. Todos los derechos reservados. | Construido para campeones.</p>
         </div>
     </footer>
 
@@ -885,7 +1159,7 @@
 
             // Simple validation
             if (!name || !email || !message) {
-                formMessage.textContent = 'Please fill in all required fields.';
+                formMessage.textContent = 'Por favor, completa todos los campos requeridos.';
                 formMessage.className = 'form-message error';
                 return;
             }
@@ -893,7 +1167,7 @@
             // Email validation
             const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
             if (!emailRegex.test(email)) {
-                formMessage.textContent = 'Please enter a valid email address.';
+                formMessage.textContent = 'Por favor, ingresa una dirección de correo válida.';
                 formMessage.className = 'form-message error';
                 return;
             }
@@ -901,11 +1175,11 @@
             // Simulate form submission
             const submitBtn = contactForm.querySelector('button[type="submit"]');
             const originalText = submitBtn.textContent;
-            submitBtn.textContent = 'Sending...';
+            submitBtn.textContent = 'Enviando...';
             submitBtn.disabled = true;
 
             setTimeout(() => {
-                formMessage.textContent = 'Thank you! Your message has been sent successfully. We\'ll be in touch soon!';
+                formMessage.textContent = '¡Gracias! Tu mensaje ha sido enviado exitosamente. ¡Nos pondremos en contacto pronto!';
                 formMessage.className = 'form-message success';
                 
                 // Reset form
